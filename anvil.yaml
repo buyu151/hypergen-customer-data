@@ -1,8 +1,54 @@
-allow_embedding: false
-package_name: M3_App_1
-name: M3 App 1
-startup_form: Form1
-renamed: true
-runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
 dependencies: []
-services: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+package_name: Hypergen_customer_data
+allow_embedding: false
+name: Hypergen_customer_data
+runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
+metadata: {logo_img: 'asset:HyperGen-Logo-Icon-POS.png'}
+startup_form: Form1
+db_schema:
+  table_1_2:
+    title: Table 1
+    client: none
+    server: full
+    columns:
+    - name: user_id
+      admin_ui: {width: 200}
+      type: string
+    - name: days_op_per_year
+      admin_ui: {width: 200}
+      type: string
+    - name: cost_fuel
+      admin_ui: {width: 200}
+      type: string
+    - name: cost_electric
+      admin_ui: {width: 200}
+      type: string
+    - name: avg_pwr
+      admin_ui: {width: 200}
+      type: string
+    - name: energy_inflation
+      admin_ui: {width: 200}
+      type: string
+    - name: avg_solar_irr
+      admin_ui: {width: 200}
+      type: string
+    - name: avg_wind_speed
+      admin_ui: {width: 200}
+      type: string
+    - name: run_time
+      admin_ui: {width: 200}
+      type: string
+    - name: date_time
+      admin_ui: {width: 200}
+      type: datetime
+    - name: country
+      admin_ui: {width: 200}
+      type: string
+    - name: user_ip
+      admin_ui: {width: 200}
+      type: string
+renamed: true
