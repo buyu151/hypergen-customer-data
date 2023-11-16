@@ -6,6 +6,10 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
+- source: /runtime/services/anvil/users.yml
+  client_config: {allow_signup: false, enable_automatically: false, use_email: false,
+    confirm_email: true, use_google: true}
+  server_config: {user_table: users}
 package_name: Hypergen_customer_data
 allow_embedding: false
 name: Hypergen_customer_data
@@ -54,4 +58,30 @@ db_schema:
     - name: user_ip
       admin_ui: {width: 200}
       type: string
+  users:
+    client: none
+    server: full
+    columns:
+    - name: email
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: enabled
+      admin_ui: {order: 1, width: 200}
+      type: bool
+    - name: last_login
+      admin_ui: {order: 2, width: 200}
+      type: datetime
+    - name: password_hash
+      admin_ui: {order: 3, width: 200}
+      type: string
+    - name: n_password_failures
+      admin_ui: {order: 4, width: 200}
+      type: number
+    - name: confirmed_email
+      admin_ui: {order: 5, width: 200}
+      type: bool
+    - name: signed_up
+      admin_ui: {order: 6, width: 200}
+      type: datetime
+    title: Users
 renamed: true

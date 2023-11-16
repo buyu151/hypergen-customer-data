@@ -1,3 +1,4 @@
+import anvil.users
 import anvil.google.auth, anvil.google.drive, anvil.google.mail
 from anvil.google.drive import app_files
 import anvil.tables as tables
@@ -169,7 +170,34 @@ def get_user_data():
                                         'run_time': 'Run Time'
                                        },
                               title="Normalized User Choices Across Different Parameters")
+
+    #----------------------------------------
+    # Create a box plot figure
+
+    # Normalize the columns
+
+    for col in columns_to_normalize:
+        user_df[col] = pd.to_numeric(user_df[col], errors='coerce')  # Ensure the data is numeric
+        user_df[col] = (user_df[col] - user_df[col].min()) / (user_df[col].max() - user_df[col].min())
     
-    return fig1, fig2, fig3, fig4
+    # Map each unique user_ip to a sequential label
+    unique_ips = user_df['user_ip'].unique()
+    ip_to_label = {ip: f"User {i+1}" for i, ip in enumerate(unique_ips)}
+    user_df['user_label'] = user_df['user_ip'].map(ip_to_label)
+   
+    
+    fig5 = go.Figure()
+    
+    # Add a box plot for each normalized column
+    for col in columns_to_normalize:
+        fig5.add_trace(go.Box(y=user_df[col], x=user_df['user_label'], name=col))
+    
+    # Update layout
+    fig5.update_layout(title="Box Plots of Normalized Columns by User", xaxis_title="User", yaxis_title="Normalized Value")
+
+    #------------------------------------
+       
+    
+    return fig1, fig2, fig3, fig4, fig5
 
     
