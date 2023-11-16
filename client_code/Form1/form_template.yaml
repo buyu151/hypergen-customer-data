@@ -48,6 +48,13 @@ components:
       properties: {}
       type: Plot
       layout_properties: {grid_position: 'YENRZR,PMUCUV'}
+    - name: label_1
+      properties: {text: 'Note: To normalize values, each column was manipulated so
+          that the values fall within a standard range, typically 0 to 1. This can
+          be done by subtracting the minimum value of each column and dividing by
+          the range (max - min) of that column.'}
+      type: Label
+      layout_properties: {grid_position: 'NREOVO,LPMZTX'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
