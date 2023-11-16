@@ -57,7 +57,7 @@ components:
       type: Plot
       layout_properties: {grid_position: 'YENRZR,PMUCUV'}
     - name: link_2
-      properties: {text: For how to interpret the graph above (parallel coordinates plot) click here!,
+      properties: {text: For how to interpret the graph above (box plot) click here!,
         icon: 'fa:area-chart', spacing_above: medium, spacing_below: medium, align: center,
         bold: true, underline: true}
       type: Link
