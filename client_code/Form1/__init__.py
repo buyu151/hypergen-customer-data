@@ -51,4 +51,12 @@ class Form1(Form1Template):
             self.content_panel.clear()
             open_form('LogOut')
 
+    def link_1_click(self, **event_args):
+        """This method is called when the link is clicked"""
+        open_form('Form2')
+
+    def link_2_click(self, **event_args):
+        """This method is called when the link is clicked"""
+        open_form('Form3')
+
 
