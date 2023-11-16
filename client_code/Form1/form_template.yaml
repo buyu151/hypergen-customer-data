@@ -30,20 +30,20 @@ components:
     - name: plot_1
       properties: {}
       type: Plot
-      layout_properties: {grid_position: 'FKIPZH,NKBRDJ OTESNX,JNQEIA'}
+      layout_properties: {grid_position: 'FKIPZH,NKBRDJ'}
       event_bindings: {click: plot_1_click}
-    - name: plot_4
-      properties: {}
-      type: Plot
-      layout_properties: {grid_position: 'FKIPZH,NKBRDJ HSDEHH,HSVQMA'}
     - name: plot_3
       properties: {}
       type: Plot
-      layout_properties: {grid_position: 'FKIPZH,EWGROO GZPKAP,QXRFUU'}
+      layout_properties: {grid_position: 'FKIPZH,EWGROO'}
     - name: plot_2
       properties: {}
       type: Plot
-      layout_properties: {grid_position: 'FKIPZH,EWGROO ESJIGY,ZIVSPG'}
+      layout_properties: {grid_position: 'CFPPQI,JJLHGD'}
+    - name: plot_4
+      properties: {}
+      type: Plot
+      layout_properties: {grid_position: 'FKONJC,FTARLU'}
     - name: plot_5
       properties: {}
       type: Plot
