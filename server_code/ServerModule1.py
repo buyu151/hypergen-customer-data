@@ -216,6 +216,9 @@ def get_user_data():
     # # Update layout
     # fig6.update_layout(xaxis_title='Date', yaxis_title='User', xaxis_rangeslider_visible=True)
 
+    #ValueError: too many values to unpack (expected 5) whne runnig this section but only when returning fig6.
+    # Can it be I need to split the amount of figres to return into tow functions?
+    
     
     return fig1, fig2, fig3, fig4, fig5
 
