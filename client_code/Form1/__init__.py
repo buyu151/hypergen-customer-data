@@ -34,7 +34,7 @@ class Form1(Form1Template):
 
     def outlined_button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        fig1, fig2, fig3, fig4, fig5 = anvil.server.call('get_user_data')
+        fig1, fig2, fig3, fig4, fig5, fig6 = anvil.server.call('get_user_data')
 
         self.plot_1.figure = fig1
         self.plot_2.figure = fig2

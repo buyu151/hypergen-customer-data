@@ -196,7 +196,26 @@ def get_user_data():
     fig5.update_layout(title="Box Plots of Normalized Columns by User", xaxis_title="User", yaxis_title="Normalized Value")
 
     #------------------------------------
-       
+    #Scatter plot of user loggins
+    # Convert 'date_time' to datetime objects
+    # user_df['date_time'] = pd.to_datetime(user_df['date_time'], utc=True, errors='coerce')
+    
+    # # # Check if 'date_time' contains timezone information and remove it
+    # # if user_df['date_time'].dt.tz is not None:
+    # #     user_df['date_time'] = user_df['date_time'].dt.tz_localize(None)
+
+    
+    # # # Map each unique user_ip to a sequential label
+    # # unique_ips = user_df['user_ip'].unique()
+    # # ip_to_label = {ip: f"User {i+1}" for i, ip in enumerate(unique_ips)}
+    # # user_df['user_label'] = user_df['user_ip'].map(ip_to_label)
+    
+    # # Create a scatter plot
+    # fig6 = px.scatter(user_df, x='date_time', y='user_label', title='User Logins Over Time')
+    
+    # # Update layout
+    # fig6.update_layout(xaxis_title='Date', yaxis_title='User', xaxis_rangeslider_visible=True)
+
     
     return fig1, fig2, fig3, fig4, fig5
 
